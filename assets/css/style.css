@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+}
+body {
+    margin: 0;
+    border: 0;
+    background-color: rgb(231, 231, 231);
+}
+header {
+    grid-area: header;
+    background-color: rgb(37, 82, 123);
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+menu { 
+    grid-area: menu;
+    background-color: rgb(231, 231, 231);
+    padding: 0;
+
+}
+
+.aside {
+    display: flex;
+    
+}
+.aside ul {
+    flex-direction: column;
+}
+.aside li {
+    list-style: none;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(231, 231, 231);
+
+}
+
+.grid-item1 {
+    background-color: aqua;
+    grid-area: a;
+}
+.grid-item2 {
+    background-color: rgb(56, 129, 129);
+    grid-area: b;
+}
+footer {
+    grid-area: footer;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-areas:
+        "header header"
+        "menu main"
+        "footer footer";
+    gap: 10px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* auto-fit o fill son responsivos, minmax define el min de width*/
+    gap: 10px;
+    padding: 1em;  
+}
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    text-align: center;
+    color: black;
+}
+.card-footer {
+background-color: rgb(37, 82, 123);
+text-align: center;
+color: white;
+}
+
+.card img {
+    width: 100%;
+}
